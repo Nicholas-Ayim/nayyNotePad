@@ -5,13 +5,13 @@ import uuid from "react-uuid";
 import "./note.css";
 export default function App() {
   const [notes, setNotes] = useState(
-    localStorage.notes ? JSON.parse(localStorage.notes) : []
+   []
   );
   const [selectedNote, setSelectedNote] = useState(false);
 
-  useEffect(()=>{
-   localStorage.setItem("notes",JSON.stringify(notes))
-  },[notes])
+  // useEffect(()=>{
+  //  localStorage.setItem("notes",JSON.stringify(notes))
+  // },[notes])
   const onAddNote = () => {
     const newNote = {
       id: uuid(),
